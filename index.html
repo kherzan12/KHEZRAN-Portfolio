@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KHEZRAN__Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="brand-title">
+                    <a href="index.html">KHEZRAN ALI</a>
+                </div>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <div class="navbar-menu">
+                    <ul>
+                        <li><a href="#home" class="active">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li class="mobile-auth-links">
+                            <a href="#" id="mobile-login-btn">Login</a>
+                            <a href="#" id="mobile-register-btn">Register</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar-auth">
+                    <button id="login-btn" class="auth-button login-btn">Login</button>
+                    <button id="register-btn" class="auth-button register-btn">Register</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Login</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" name="email" required placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" name="password" required placeholder="Enter your password">
+                </div>
+                <button type="submit" class="submit-button">Login</button>
+                <div class="form-switch">
+                    Don't have an account? <a href="#" id="switch-to-register">Register</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Registration Modal -->
+    <div id="register-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Register</h2>
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="register-name">Full Name</label>
+                    <input type="text" id="register-name" name="name" required placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label for="register-email">Email</label>
+                    <input type="email" id="register-email" name="email" required placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Password</label>
+                    <input type="password" id="register-password" name="password" required placeholder="Create a password">
+                </div>
+                <div class="form-group">
+                    <label for="register-confirm-password">Confirm Password</label>
+                    <input type="password" id="register-confirm-password" name="confirm-password" required placeholder="Confirm your password">
+                </div>
+                <button type="submit" class="submit-button">Register</button>
+                <div class="form-switch">
+                    Already have an account? <a href="#" id="switch-to-login">Login</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Welcome to My Portfolio!</h1>
+                <p>Hi, I' Khezran Ali, a passionate Web Developer specializing in front-end and back-end development. 
+                    I build modern, responsive, and user-friendly websites and applications.</p>
+                <button id="learnMoreBtn" class="cta-button">Learn More</button>
+            </div>
+        </section>
+
+        <section id="about" class="about-section animate-on-scroll">
+            <div class="section-container">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="images/about2.jpg" alt="">
+                    </div>
+                    <div class="about-text">
+                        <h3>Passionate Computer Science Professional</h3>
+                        <p>Hello! I’m Khezran Ali, a passionate Full-Stack Web Developer with a creative mindset and a strong focus on building efficient, 
+                            scalable, and visually appealing web applications. From designing elegant user interfaces to developing powerful backend systems, 
+                            I bring ideas to life with clean and functional code.</p>
+                        <div class="skills">
+                            <h4>Passionate Web Developer & Designer</h4>
+                            <ul>
+                                <li class="skill-item animate-on-scroll">Web Development</li>
+                                <li class="skill-item animate-on-scroll">UI/UX Design</li>
+                                <li class="skill-item animate-on-scroll">Front-End</li>
+                                <li class="skill-item animate-on-scroll">Back-End</li>
+                                <li class="skill-item animate-on-scroll">Full-Stack Web Developer</li>
+                                <li class="skill-item animate-on-scroll">Custom Web Development </li>
+                                <li class="skill-item animate-on-scroll"> E-commerce Development </li>
+                                <li class="skill-item animate-on-scroll">Food Ordering Apps</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services-section animate-on-scroll">
+            <div class="section-container">
+                <h2>Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <i class="fas fa-code"></i>
+                        <h3> Front-End Development</h3>
+                        <p>Development Modern, Responsive, and User-friendly web interfaces that provide seamless digital experiences. With expertise in the latest front-end technologies, I build websites and Applications that are visually Appealing, Fast, and Highly interactive.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-brain"></i>
+                        <h3>Backend Development</h3>
+                        <p>Specialize in secure, Scalable, and High-performance backend solutions that power modern web applications. From database management to API development, I ensure seamless functionality, security, and efficiency for your website or application.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-cloud"></i>
+                        <h3>Web Hosting & Deployment</h3>
+                        <p>Provide secure, Reliable, and High-performance web hosting solutions to ensure your website or application runs smoothly 24/7. Whether you need shared hosting, VPS, or cloud deployment, I can help you set up and manage your hosting environment.</P>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-database"></i>
+                        <h3>Database Expert</h3>
+                        <p> Designing, Managing, and Optimizing databases to ensure efficient data storage, high performance, and security for web applications. With expertise in SQL and NoSQL databases, I develop scalable and structured database solutions that enhance application reliability. </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section animate-on-scroll">
+            <div class="container">
+                <h2>My Projects</h2>
+                <div class="projects-filter">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="web">Web Development</button>
+                    <button class="filter-btn" data-filter="ml">Portfolio</button>
+                    <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+                </div>
+                
+                <div class="projects-grid">
+                    <!-- Project 1: Web Development -->
+                    <div class="project-card animate-on-scroll" data-category="web">
+                        <div class="project-image">
+                            <img src="images/e-comm.jpg" alt="E-commerce Platform">
+                            <div class="project-overlay">
+                                <a href="#" class="project-link" data-project="project1">View Details</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>E-commerce Platform</h3>
+                            <p>Full-stack e-commerce website with payment integration</p>
+                            <div class="project-tags">
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Machine Learning -->
+                    <div class="project-card animate-on-scroll" data-category="ml">
+                        <div class="project-image">
+                            <img src="images/portfolio.png" alt="Disease Prediction Model">
+                            <div class="project-overlay">
+                                <a href="#" class="project-link" data-project="project2">View Details</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Portfolio</h3>
+                            <p>Web development, UI/UX design, and Database management.</p>
+                            <div class="project-tags">
+                                <span>Web development</span>
+                                <span>UI/UX design</span>
+                                <span>Database management</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Mobile App -->
+                    <div class="project-card animate-on-scroll" data-category="mobile">
+                        <div class="project-image">
+                            <img src="images/mobile-app.png" alt="Fitness Tracking App">
+                            <div class="project-overlay">
+                                <a href="#" class="project-link" data-project="project3">View Details</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Fitness Tracking App</h3>
+                            <p>Cross-platform mobile app for fitness tracking and analysis</p>
+                            <div class="project-tags">
+                                <span>Flutter</span>
+                                <span>Firebase</span>
+                                <span>Machine Learning</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section animate-on-scroll">
+            <div class="section-container">
+                <h2>Contact Me</h2>
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p>Email: contact@csportfolio.com</p>
+                    <p>Phone: +1 (555) 123-4567</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Project Detail Modals -->
+    <div id="project1-modal" class="project-modal">
+        <div class="project-modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>E-commerce Platform</h2>
+            <div class="project-modal-details">
+                <img src="images/e-comm-2.png" alt="E-commerce Platform Details">
+                <div class="project-description">
+                    <h3>Project Overview</h3>
+                    <p>A comprehensive e-commerce platform built with modern web technologies. Features include user authentication, product browsing, cart management, and secure payment integration.</p>
+                    
+                    <h3>Key Technologies</h3>
+                    <ul>
+                        <li>Frontend: React.js</li>
+                        <li>Backend: Node.js with Express</li>
+                        <li>Database: MongoDB</li>
+                        <li>Payment Gateway: Stripe</li>
+                    </ul>
+                    
+                    <h3>Features</h3>
+                    <ul>
+                        <li>User authentication and authorization</li>
+                        <li>Product catalog with search and filter</li>
+                        <li>Shopping cart functionality</li>
+                        <li>Secure payment processing</li>
+                        <li>Responsive design</li>
+                    </ul>
+                    
+                    <div class="project-links">
+                        <a href="#" target="_blank" class="btn github-link">GitHub Repository</a>
+                        <a href="#" target="_blank" class="btn live-demo">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="project2-modal" class="project-modal">
+        <div class="project-modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Disease Prediction ML Model</h2>
+            <div class="project-modal-details">
+                <img src="images/portfolio.png" alt="ML Disease Prediction Details">
+                <div class="project-description">
+                    <h3>Project Overview</h3>
+                    <p>An advanced machine learning model that predicts potential diseases based on medical symptoms and patient history using deep learning techniques.</p>
+                    
+                    <h3>Key Technologies</h3>
+                    <ul>
+                        <li>Language: Python</li>
+                        <li>ML Frameworks: TensorFlow, Keras</li>
+                        <li>Data Analysis: Pandas, NumPy</li>
+                        <li>Visualization: Matplotlib</li>
+                    </ul>
+                    
+                    <h3>Features</h3>
+                    <ul>
+                        <li>Multi-class disease classification</li>
+                        <li>High accuracy prediction model</li>
+                        <li>Interactive web interface</li>
+                        <li>Comprehensive medical dataset</li>
+                    </ul>
+                    
+                    <div class="project-links">
+                        <a href="#" target="_blank" class="btn github-link">GitHub Repository</a>
+                        <a href="#" target="_blank" class="btn live-demo">Jupyter Notebook</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="project3-modal" class="project-modal">
+        <div class="project-modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Fitness Tracking App</h2>
+            <div class="project-modal-details">
+                <img src="images/mobile-app.png" alt="Fitness App Details">
+                <div class="project-description">
+                    <h3>Project Overview</h3>
+                    <p>A cross-platform mobile application for tracking fitness activities, providing personalized workout recommendations and progress analysis.</p>
+                    
+                    <h3>Key Technologies</h3>
+                    <ul>
+                        <li>Framework: Flutter</li>
+                        <li>Backend: Firebase</li>
+                        <li>State Management: Provider</li>
+                        <li>Machine Learning: TensorFlow Lite</li>
+                    </ul>
+                    
+                    <h3>Features</h3>
+                    <ul>
+                        <li>Activity tracking (steps, calories, distance)</li>
+                        <li>Personalized workout plans</li>
+                        <li>Progress visualization</li>
+                        <li>Real-time sync across devices</li>
+                        <li>AI-powered recommendation engine</li>
+                    </ul>
+                    
+                    <div class="project-links">
+                        <a href="#" target="_blank" class="btn github-link">GitHub Repository</a>
+                        <a href="#" target="_blank" class="btn live-demo">App Store</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Comprehensive Footer Section -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <!-- Contact Information -->
+                <div class="footer-column contact-info">
+                    <h3>Contact Details</h3>
+                    <ul>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:wajidali@example.com">Khezrankhann@gmail.com</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+1234567890">+1 (342) 590-0672</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            Shagai Sadiu Sharif Swat 
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-column quick-links">
+                    <h3>Quick Navigation</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Me</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Professional Profiles -->
+                <div class="footer-column social-links">
+                    <h3>Professional Networks</h3>
+                    <div class="social-icons">
+                        <a href="https://linkedin.com/in/wajidali" target="_blank" class="social-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/wajidali" target="_blank" class="social-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://twitter.com/wajidali" target="_blank" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://stackoverflow.com/users/wajidali" target="_blank" class="social-icon">
+                            <i class="fab fa-stack-overflow"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Newsletter Signup -->
+                <div class="footer-column newsletter">
+                    <h3>Stay Updated</h3>
+                    <form id="newsletter-form" class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                    <p class="newsletter-text">Get the latest updates on my projects and tech insights!</p>
+                </div>
+            </div>
+
+            <!-- Copyright and Additional Info -->
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2025 KHEZRAN ALI . All Rights Reserved.</p>
+                </div>
+                <div class="footer-legal-links">
+                    <a href="#privacy-policy">Privacy Policy</a>
+                    <a href="#terms-of-service">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
